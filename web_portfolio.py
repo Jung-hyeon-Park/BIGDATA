@@ -6,7 +6,7 @@ from PIL import Image
 
 app = Flask(__name__)
 
-@app.route('/user', methods=['POST', 'GET'])
+@app.route('/imageDeep', methods=['GET'])
 def get():
     name3 = request.args.get('fullName', type=str)
     #print("name3 = " + name3)
@@ -49,6 +49,6 @@ def get():
     return abc
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host = 'localhost', port=8084, debug=True)
 
 
